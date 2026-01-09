@@ -1,325 +1,223 @@
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Trainee Marksheet | Ministry of Skill Development and Entrepreneurship</title>  <!--
-    NOTE:
-    • Colors are softened to match original government portal
-    • Table data corrected (Engineering Drawing & totals fixed)
-    • Extra spacing, borders, and typography refined
-    • Only HTML + CSS (no JS) to keep it realistic
-  -->  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <title>Trainee Marksheet | Ministry of Skill Development & Entrepreneurship</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#eef3f7;
+      color:#000;
+    }/* HEADER */
+.header{
+  background:linear-gradient(#f6faff,#e6f1fb);
+  border-bottom:1px solid #b6cce3;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.header h1{
+  margin:0;
+  font-size:20px;
+  color:#083c6d;
+}
+.header span{font-size:12px;color:#083c6d}
 
-    body {
-      margin: 0;
-      background-color: #eef3f8;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #000;
-    }
+/* NAV */
+.nav{
+  background:linear-gradient(#cfe3f6,#b9d4ef);
+  border-bottom:2px solid #9dbbda;
+  padding:7px 12px;
+}
+.nav a{
+  font-size:13px;
+  font-weight:bold;
+  color:#000;
+  text-decoration:none;
+  margin-right:18px;
+}
 
-    /* ===== HEADER ===== */
-    .header {
-      background: linear-gradient(#f5f9fd, #e3eef9);
-      border-bottom: 1px solid #b7cde5;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+/* MAIN */
+.container{
+  width:96%;
+  margin:15px auto;
+  background:#fff;
+  border:1px solid #b6cce3;
+  padding:12px;
+}
+.title{
+  font-size:22px;
+  font-weight:bold;
+  border-bottom:2px solid #9dbbda;
+  padding-bottom:6px;
+  margin-bottom:12px;
+}
 
-    .header-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #083c6d;
-    }
+.section{
+  border:1px solid #b6cce3;
+  margin-bottom:16px;
+}
+.section-head{
+  background:linear-gradient(#e8f1fa,#d7e7f7);
+  padding:6px 10px;
+  border-bottom:1px solid #b6cce3;
+  font-weight:bold;
+}
 
-    .header-links {
-      font-size: 12px;
-      color: #083c6d;
-    }
+/* FORM */
+table.form{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+table.form td{padding:8px 10px}
+table.form input,table.form select{
+  width:230px;
+  padding:4px 6px;
+  border:1px solid #b6cce3;
+}
 
-    /* ===== NAV BAR ===== */
-    .nav {
-      background: linear-gradient(#cfe3f6, #b7d4ef);
-      border-bottom: 2px solid #9cbcdf;
-      padding: 7px 10px;
-    }
+.btns{text-align:center;padding:10px}
+.btn{
+  background:linear-gradient(#8fb6dd,#6f9fd1);
+  border:1px solid #5d8cc0;
+  padding:5px 20px;
+  font-size:13px;
+  cursor:pointer;
+}
 
-    .nav a {
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: bold;
-      color: #000;
-      margin-right: 18px;
-    }
+/* INFO */
+table.info{
+  width:100%;
+  font-size:13px;
+  border-collapse:collapse;
+  margin-bottom:8px;
+}
+table.info td{padding:6px 10px}
 
-    /* ===== MAIN CONTAINER ===== */
-    .wrapper {
-      width: 96%;
-      margin: 15px auto;
-      background: #ffffff;
-      border: 1px solid #b7cde5;
-      padding: 12px;
-    }
+/* MARKS TABLE */
+table.marks{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12.5px;
+}
+table.marks th,table.marks td{
+  border:1px solid #b6cce3;
+  padding:6px 5px;
+  text-align:center;
+}
+table.marks th{
+  background:linear-gradient(#edf4fb,#dbeaf8);
+  font-weight:bold;
+}
+table.marks tr.total{
+  background:#edf4fb;
+  font-weight:bold;
+}
 
-    .page-title {
-      font-size: 22px;
-      font-weight: bold;
-      border-bottom: 2px solid #9cbcdf;
-      padding-bottom: 6px;
-      margin-bottom: 12px;
-    }
+.footer{
+  font-size:13px;
+  margin-top:10px;
+}
+.center{text-align:center;margin-top:15px}
 
-    /* ===== COMMON SECTION ===== */
-    .section {
-      border: 1px solid #b7cde5;
-      margin-bottom: 16px;
-    }
+  </style>
+</head>
+<body><div class="header">
+  <h1>Ministry of Skill Development And Entrepreneurship</h1>
+  <span>Support | Login | FAQ | Help | SiteMap</span>
+</div><div class="nav">
+  <a>Home</a><a>ITI</a><a>Trainee</a><a>Verification</a><a>Instructor</a><a>Examiner</a><a>Calendar</a><a>CFI</a><a>Help</a><a>Dashboard</a><a>Complaint Tool</a>
+</div><div class="container">
+  <div class="title">Trainee MarkSheet</div>  <div class="section">
+    <div class="section-head">Search Criteria</div>
+    <table class="form">
+      <tr>
+        <td>Roll Number/Registration Number <span style="color:red">*</span></td>
+        <td><input value="R190810024940"></td>
+        <td>Exam System <span style="color:red">*</span></td>
+        <td><select><option>Annual</option></select></td>
+      </tr>
+      <tr>
+        <td>Year <span style="color:red">*</span></td>
+        <td><select><option>All</option></select></td>
+      </tr>
+    </table>
+    <div class="btns">
+      <button class="btn">Search</button>
+      <button class="btn">Clear</button>
+    </div>
+  </div>  <div class="section">
+    <div class="section-head">Search Results</div><table class="info">
+  <tr>
+    <td><b>Roll Number:</b> 190810024940</td>
+    <td><b>Trainee Name:</b> ALOK RANJAN</td>
+    <td><b>Academic Session:</b> Aug 2019 (Annual All)</td>
+  </tr>
+  <tr>
+    <td><b>Trade Name:</b> Electrician (NSQF)</td>
+    <td><b>Exam Session:</b> Jul 2021</td>
+  </tr>
+  <tr>
+    <td><b>ITI Code:</b> PR10000213</td>
+    <td><b>ITI Name:</b> Chatrapati Shivaji ITC</td>
+  </tr>
+  <tr>
+    <td><b>Overall Result:</b> Pass</td>
+  </tr>
+</table>
 
-    .section-header {
-      background: linear-gradient(#e6f0fa, #d4e5f6);
-      border-bottom: 1px solid #b7cde5;
-      padding: 6px 10px;
-      font-weight: bold;
-      font-size: 14px;
-    }
+<table class="marks">
+  <tr>
+    <th>S.No.</th><th>Year</th>
+    <th>Trade Theory<br>Max. Marks</th><th>Trade Theory<br>Marks Secured</th>
+    <th>Employability Skills<br>Max. Marks</th><th>Employability Skills<br>Marks Secured</th>
+    <th>Workshop Calculation & Science<br>Max. Marks</th><th>Workshop Calculation & Science<br>Marks Secured</th>
+    <th>Engineering Drawing<br>Max. Marks</th><th>Engineering Drawing<br>Marks Secured</th>
+    <th>Trade Practical<br>Max. Marks</th><th>Trade Practical<br>Marks Secured</th>
+    <th>Formative Assessment<br>Max. Marks</th><th>Formative Assessment<br>Marks Secured</th>
+    <th>Total Max. Marks</th><th>Total Marks Secured</th>
+  </tr>
+  <tr>
+    <td>1</td><td>Year-1</td>
+    <td>100</td><td>59</td>
+    <td>50</td><td>20</td>
+    <td>50</td><td>28</td>
+    <td>50</td><td>29</td>
+    <td>250</td><td>221</td>
+    <td>200</td><td>184</td>
+    <td>380</td><td>588</td>
+  </tr>
+  <tr>
+    <td>2</td><td>Year-2</td>
+    <td>100</td><td>33</td>
+    <td>50</td><td>24</td>
+    <td>50</td><td>22</td>
+    <td>50</td><td>25</td>
+    <td>250</td><td>221</td>
+    <td>221</td><td>196</td>
+    <td>330</td><td>536</td>
+  </tr>
+  <tr class="total">
+    <td colspan="2">Total</td>
+    <td>200</td><td>92</td>
+    <td>100</td><td>44</td>
+    <td>100</td><td>50</td>
+    <td>100</td><td>54</td>
+    <td>500</td><td>462</td>
+    <td>400</td><td>380</td>
+    <td>1300</td><td>1094</td>
+  </tr>
+</table>
 
-    /* ===== SEARCH FORM ===== */
-    .form-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 8px;
-    }
+<div class="footer"><b>Result Date:</b> 10-Mar-2022</div>
 
-    .form-table td {
-      padding: 8px 10px;
-      font-size: 13px;
-    }
-
-    .form-table input,
-    .form-table select {
-      width: 220px;
-      padding: 4px 6px;
-      border: 1px solid #b7cde5;
-      font-size: 13px;
-    }
-
-    .btn-area {
-      text-align: center;
-      padding: 10px 0 14px 0;
-    }
-
-    .btn {
-      background: linear-gradient(#9cbcdf, #7fa8d6);
-      border: 1px solid #6b94c3;
-      color: #000;
-      padding: 5px 18px;
-      font-size: 13px;
-      margin: 0 6px;
-      cursor: pointer;
-    }
-
-    /* ===== INFO TABLE ===== */
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 8px 0 10px 0;
-      font-size: 13px;
-    }
-
-    .info-table td {
-      padding: 6px 10px;
-    }
-
-    /* ===== MARKS TABLE ===== */
-    table.marks {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12.5px;
-      margin-top: 10px;
-    }
-
-    table.marks th,
-    table.marks td {
-      border: 1px solid #b7cde5;
-      padding: 6px 5px;
-      text-align: center;
-    }
-
-    table.marks th {
-      background: linear-gradient(#eef4fb, #ddeaf7);
-      font-weight: bold;
-    }
-
-    table.marks tr.total {
-      background-color: #eef4fb;
-      font-weight: bold;
-    }
-
-    /* ===== FOOTER INFO ===== */
-    .result-date {
-      margin-top: 10px;
-      font-size: 13px;
-    }
-
-    .center {
-      text-align: center;
-      margin-top: 15px;
-    }
-  </style></head>
-<body>  <!-- HEADER -->  <div class="header">
-    <div class="header-title">Ministry of Skill Development And Entrepreneurship</div>
-    <div class="header-links">Support | Login | FAQ | Help | SiteMap</div>
-  </div>  <!-- NAVIGATION -->  <div class="nav">
-    <a href="#">Home</a>
-    <a href="#">ITI</a>
-    <a href="#">Trainee</a>
-    <a href="#">Verification</a>
-    <a href="#">Instructor</a>
-    <a href="#">Examiner</a>
-    <a href="#">Calendar</a>
-    <a href="#">CFI</a>
-    <a href="#">Help</a>
-    <a href="#">Dashboard</a>
-    <a href="#">Complaint Tool</a>
-  </div>  <!-- MAIN -->  <div class="wrapper"><div class="page-title">Trainee MarkSheet</div>
-
-<!-- SEARCH CRITERIA -->
-<div class="section">
-  <div class="section-header">Search Criteria</div>
-  <table class="form-table">
-    <tr>
-      <td>Roll Number / Registration Number <span style="color:red">*</span></td>
-      <td><input type="text" value="R190810024940"></td>
-      <td>Exam System <span style="color:red">*</span></td>
-      <td>
-        <select>
-          <option>Annual</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Year <span style="color:red">*</span></td>
-      <td>
-        <select>
-          <option>All</option>
-        </select>
-      </td>
-    </tr>
-  </table>
-  <div class="btn-area">
-    <button class="btn">Search</button>
-    <button class="btn">Clear</button>
-  </div>
+<div class="center">
+  <button class="btn">Redirect To Answer Sheet</button>
 </div>
 
-<!-- SEARCH RESULT -->
-<div class="section">
-  <div class="section-header">Search Results</div>
-
-  <table class="info-table">
-    <tr>
-      <td><b>Roll Number:</b> 190810024940</td>
-      <td><b>Trainee Name:</b> ALOK RANJAN</td>
-      <td><b>Academic Session:</b> Aug 2019 (Annual All)</td>
-    </tr>
-    <tr>
-      <td><b>Trade Name:</b> Electrician (NSQF)</td>
-      <td><b>Exam Session:</b> Jul 2021</td>
-    </tr>
-    <tr>
-      <td><b>ITI Code:</b> PR10000213</td>
-      <td><b>ITI Name:</b> Chatrapati Shivaji ITC</td>
-    </tr>
-    <tr>
-      <td><b>Overall Result:</b> Pass</td>
-    </tr>
-  </table>
-
-  <!-- MARKS TABLE -->
-  <table class="marks">
-    <tr>
-      <th>S.No.</th>
-      <th>Year</th>
-      <th>Trade Theory<br>Max</th>
-      <th>Trade Theory<br>Secured</th>
-      <th>Employability Skills<br>Max</th>
-      <th>Employability Skills<br>Secured</th>
-      <th>Workshop Calculation & Science<br>Max</th>
-      <th>Workshop Calculation & Science<br>Secured</th>
-      <th>Engineering Drawing<br>Max</th>
-      <th>Engineering Drawing<br>Secured</th>
-      <th>Trade Practical<br>Max</th>
-      <th>Trade Practical<br>Secured</th>
-      <th>Formative Assessment<br>Max</th>
-      <th>Formative Assessment<br>Secured</th>
-      <th>Total Max</th>
-      <th>Total Secured</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Year-1</td>
-      <td>100</td>
-      <td>59</td>
-      <td>50</td>
-      <td>20</td>
-      <td>50</td>
-      <td>28</td>
-      <td>50</td>
-      <td>29</td>
-      <td>250</td>
-      <td>221</td>
-      <td>200</td>
-      <td>184</td>
-      <td>380</td>
-      <td>588</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Year-2</td>
-      <td>100</td>
-      <td>33</td>
-      <td>50</td>
-      <td>24</td>
-      <td>50</td>
-      <td>22</td>
-      <td>50</td>
-      <td>25</td>
-      <td>250</td>
-      <td>221</td>
-      <td>200</td>
-      <td>196</td>
-      <td>330</td>
-      <td>536</td>
-    </tr>
-    <tr class="total">
-      <td colspan="2">Total</td>
-      <td>200</td>
-      <td>92</td>
-      <td>100</td>
-      <td>44</td>
-      <td>100</td>
-      <td>50</td>
-      <td>100</td>
-      <td>54</td>
-      <td>500</td>
-      <td>462</td>
-      <td>400</td>
-      <td>380</td>
-      <td>1300</td>
-      <td>1094</td>
-    </tr>
-  </table>
-
-  <div class="result-date"><b>Result Date:</b> 10-Mar-2022</div>
-
-  <div class="center">
-    <button class="btn">Redirect To Answer Sheet</button>
   </div>
-
-</div>
-
-  </div></body>
+</div></body>
 </html>
