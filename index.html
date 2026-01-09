@@ -1,18 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Trainee Marksheet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministry of Skill Development and Entrepreneurship - Trainee Marksheet</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f4f4; }
+        .header { background: #007bff; color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .header img { height: 40px; } /* Add logo if needed */
+        .nav { display: flex; gap: 10px; }
+        .nav a { color: white; text-decoration: none; }
+        .container { max-width: 1200px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .search-section { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        input, select, button { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #28a745; color: white; cursor: pointer; }
+        button:hover { background: #218838; }
+        .results { display: none; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background: #007bff; color: white; }
+        .pass { color: green; font-weight: bold; }
+        @media (max-width: 768px) { .search-section { flex-direction: column; } }
+    </style>
 </head>
 <body>
-    <h1>Ministry of Skill Development & Entrepreneurship</h1>
-    <h2>Trainee Marksheet</h2>
-
-    <p><b>Name:</b> ALOK RANJAN</p>
-    <p><b>Trade:</b> Electrician</p>
-    <p><b>Result:</b> PASS</p>
-
-    <a href="https://ncvtmis.gov.in/Pages/MarkSheet/Validate.aspx?Key=R190810024940|A|All">
-    
-    </a>
+    <div class="header">
+        <div>Ministry of Skill Development And Entrepreneurship</div>
+        <div class="nav">
+            <a href="#">Support</a>
+            <a href="#">Login</a>
+            <a href="#">FAQ</a>
+            <a href="#">Help</a>
+            <a href="#">SiteMap</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Trainee Marksheet</h2>
+        <div class="search-section">
+            <input type="text" id="rollNum" placeholder="Roll Number/Registration Number" value="170820016223">
+            <select id="examSystem">
+                <option value="">---Select---</option>
+                <option value="Semester">Semester</option>
+                <option value="Annual" selected>Annual</option>
+            </select>
+            <select id="semester">
+                <option value="">---select---</option>
+                <option value="1">1</option>
+            </select>
+            <button onclick="searchResults()">Search</button>
+            <button onclick="resetForm()">Reset</button>
+        </div>
+        <div id="results" class="results">
+            <h3>Search Results</h3>
+            <table>
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Academic Session</th>
+                </tr>
+                <tr>
+                    <td>170820016223</td>
+                    <td>ALI JAN</td>
+                    <td>AY 2019-20</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Trade</th>
+                    <th>Max 1</th>
+                    <th>Obt 1</th>
+                    <th>Max 2</th>
+                    <th>Obt 2</th>
+                    <!-- Add more as per image -->
+                    <th>Overall %</th>
+                </tr>
+                <tr>
+                    <td>Employability Skills/ITI</td>
+                    <td>100</td>
+                    <td>88</td>
+                    <td>50</td>
+                    <td>44</td>
+                    <td>82.67%</td>
+                </tr>
+                <!-- Add more rows for full table matching image -->
+                <tr>
+                    <td>Total</td>
+                    <td>1000</td>
+                    <td>885</td>
+                    <td>500</td>
+                    <td>447</td>
+                    <td>87.16%</td>
+                    <td class="pass">PASS</td>
+                </tr>
+            </table>
+            <p>Generated on 10/09/2022 [file:2]</p>
+        </div>
+    </div>
+    <script>
+        function searchResults() {
+            document.getElementById('results').style.display = 'block';
+        }
+        function resetForm() {
+            document.getElementById('rollNum').value = '';
+            document.getElementById('examSystem').value = '';
+            document.getElementById('semester').value = '';
+            document.getElementById('results').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
