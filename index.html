@@ -1,156 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Trainee Marksheet</title>
+    <meta charset="UTF-8">
+    <title>Marksheet</title>
     <style>
         body {
-            font-family: Arial;
-            background: #eaf3ff;
-        }
-
-        .container {
-            width: 95%;
-            margin: auto;
-            background: white;
-            border: 2px solid #4a90e2;
-            padding: 10px;
-        }
-
-        h2 {
-            background: #4a90e2;
-            color: white;
-            padding: 10px;
-        }
-
-        .box {
-            border: 2px solid #4a90e2;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
-
-        .row {
+            margin: 0;
+            padding: 0;
+            background: black;
             display: flex;
-            margin-bottom: 10px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-
-        .row label {
-            width: 250px;
-            font-weight: bold;
-        }
-
-        input, select {
-            width: 250px;
-            padding: 5px;
-        }
-
-        .btn {
-            background: #4a90e2;
-            color: white;
-            padding: 8px 20px;
-            border: none;
-            cursor: pointer;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        table, th, td {
-            border: 1px solid #4a90e2;
-        }
-
-        th {
-            background: #4a90e2;
-            color: white;
-            padding: 5px;
-        }
-
-        td {
-            padding: 5px;
-            text-align: center;
-        }
-
-        .footer {
-            margin-top: 15px;
-            font-weight: bold;
+        img {
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
-
 <body>
 
-<div class="container">
-
-    <h2>Trainee MarkSheet</h2>
-
-    <div class="box">
-        <h3>Search Criteria</h3>
-
-        <div class="row">
-            <label>Roll Number / Registration Number*</label>
-            <input type="text" value="R190810024940">
-        </div>
-
-        <div class="row">
-            <label>Exam System*</label>
-            <select>
-                <option>Annual</option>
-            </select>
-        </div>
-
-        <div class="row">
-            <label>Year*</label>
-            <select>
-                <option>All</option>
-            </select>
-        </div>
-
-        <button class="btn">Search</button>
-        <button class="btn">Clear</button>
-    </div>
-
-    <div class="box">
-        <h3>Search Results</h3>
-
-        <div class="row"><label>Roll Number:</label>190810024940</div>
-        <div class="row"><label>Trainee Name:</label>ALOK RANJAN</div>
-        <div class="row"><label>Trade Name:</label>Electrician (NSQF)</div>
-        <div class="row"><label>Exam Session:</label>Jul 2021</div>
-        <div class="row"><label>ITI Code:</label>PR10000213</div>
-        <div class="row"><label>ITI Name:</label>Chatrapati Shivaji ITC</div>
-        <div class="row"><label>Overall Result:</label>Pass</div>
-
-        <table>
-            <tr>
-                <th>Year</th>
-                <th>Total Max Marks</th>
-                <th>Total Marks Secured</th>
-            </tr>
-            <tr>
-                <td>Year-1</td>
-                <td>700</td>
-                <td>573</td>
-            </tr>
-            <tr>
-                <td>Year-2</td>
-                <td>700</td>
-                <td>533</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>1400</td>
-                <td>1106</td>
-            </tr>
-        </table>
-
-        <div class="footer">
-            Result Date: 03/10/2022
-        </div>
-    </div>
-
-</div>
+    <img src="marksheet.jpg" alt="Marksheet">
 
 </body>
 </html>
