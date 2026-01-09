@@ -1,123 +1,178 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Trainee Marksheet - Ministry of Skill Development</title>
-  <style>
+  <meta charset="UTF-8">
+  <title>Trainee Marksheet | Ministry of Skill Development and Entrepreneurship</title>  <!--
+    NOTE:
+    • Colors are softened to match original government portal
+    • Table data corrected (Engineering Drawing & totals fixed)
+    • Extra spacing, borders, and typography refined
+    • Only HTML + CSS (no JS) to keep it realistic
+  -->  <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
+      background-color: #eef3f8;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
       color: #000;
     }
-    .top-bar {
-      background: linear-gradient(#e9f2fb, #cfe3f6);
-      border-bottom: 1px solid #8fb5da;
-      padding: 10px 20px;
+
+    /* ===== HEADER ===== */
+    .header {
+      background: linear-gradient(#f5f9fd, #e3eef9);
+      border-bottom: 1px solid #b7cde5;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .top-bar h1 {
+
+    .header-title {
       font-size: 20px;
-      margin: 0;
-      color: #0b3c6d;
       font-weight: bold;
+      color: #083c6d;
     }
-    .nav-bar {
-      background: linear-gradient(#9cc3e6, #6fa8dc);
-      border-bottom: 2px solid #4a86c5;
-      padding: 6px 10px;
+
+    .header-links {
+      font-size: 12px;
+      color: #083c6d;
     }
-    .nav-bar a {
-      color: #000;
+
+    /* ===== NAV BAR ===== */
+    .nav {
+      background: linear-gradient(#cfe3f6, #b7d4ef);
+      border-bottom: 2px solid #9cbcdf;
+      padding: 7px 10px;
+    }
+
+    .nav a {
       text-decoration: none;
-      margin-right: 18px;
       font-size: 13px;
       font-weight: bold;
+      color: #000;
+      margin-right: 18px;
     }
-    .container {
-      width: 95%;
+
+    /* ===== MAIN CONTAINER ===== */
+    .wrapper {
+      width: 96%;
       margin: 15px auto;
-      background: #fff;
-      border: 1px solid #9bbad6;
-      padding: 10px;
+      background: #ffffff;
+      border: 1px solid #b7cde5;
+      padding: 12px;
     }
+
     .page-title {
       font-size: 22px;
       font-weight: bold;
-      border-bottom: 2px solid #6fa8dc;
-      padding: 5px 0 8px 0;
-      margin-bottom: 10px;
+      border-bottom: 2px solid #9cbcdf;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
     }
+
+    /* ===== COMMON SECTION ===== */
     .section {
-      border: 1px solid #9bbad6;
-      margin-bottom: 15px;
+      border: 1px solid #b7cde5;
+      margin-bottom: 16px;
     }
+
     .section-header {
-      background: linear-gradient(#b7d7f0, #9cc3e6);
+      background: linear-gradient(#e6f0fa, #d4e5f6);
+      border-bottom: 1px solid #b7cde5;
       padding: 6px 10px;
       font-weight: bold;
-      border-bottom: 1px solid #8fb5da;
+      font-size: 14px;
     }
-    table {
+
+    /* ===== SEARCH FORM ===== */
+    .form-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 13px;
+      margin-top: 8px;
     }
-    td, th {
-      border: 1px solid #9bbad6;
-      padding: 6px;
-      text-align: center;
-    }
-    th {
-      background: linear-gradient(#d9eaf7, #c6def3);
-      font-weight: bold;
-    }
-    .left {
-      text-align: left;
-    }
+
     .form-table td {
-      border: none;
-      padding: 8px;
-      text-align: left;
-    }
-    .form-table input, .form-table select {
-      width: 220px;
-      padding: 4px;
-      border: 1px solid #9bbad6;
-    }
-    .buttons {
-      text-align: center;
-      padding: 10px 0;
-    }
-    .buttons button {
-      background: linear-gradient(#6fa8dc, #4a86c5);
-      border: 1px solid #3d6fa3;
-      color: #fff;
-      padding: 5px 18px;
-      margin: 0 5px;
+      padding: 8px 10px;
       font-size: 13px;
+    }
+
+    .form-table input,
+    .form-table select {
+      width: 220px;
+      padding: 4px 6px;
+      border: 1px solid #b7cde5;
+      font-size: 13px;
+    }
+
+    .btn-area {
+      text-align: center;
+      padding: 10px 0 14px 0;
+    }
+
+    .btn {
+      background: linear-gradient(#9cbcdf, #7fa8d6);
+      border: 1px solid #6b94c3;
+      color: #000;
+      padding: 5px 18px;
+      font-size: 13px;
+      margin: 0 6px;
       cursor: pointer;
     }
-    .info-table td {
-      text-align: left;
-      border: none;
-      padding: 6px 10px;
+
+    /* ===== INFO TABLE ===== */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 10px 0;
       font-size: 13px;
     }
-    .result-footer {
+
+    .info-table td {
+      padding: 6px 10px;
+    }
+
+    /* ===== MARKS TABLE ===== */
+    table.marks {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-top: 10px;
+    }
+
+    table.marks th,
+    table.marks td {
+      border: 1px solid #b7cde5;
+      padding: 6px 5px;
+      text-align: center;
+    }
+
+    table.marks th {
+      background: linear-gradient(#eef4fb, #ddeaf7);
+      font-weight: bold;
+    }
+
+    table.marks tr.total {
+      background-color: #eef4fb;
+      font-weight: bold;
+    }
+
+    /* ===== FOOTER INFO ===== */
+    .result-date {
       margin-top: 10px;
       font-size: 13px;
     }
+
     .center {
       text-align: center;
+      margin-top: 15px;
     }
-  </style>
-</head>
-<body>  <div class="top-bar">
-    <h1>Ministry of Skill Development And Entrepreneurship</h1>
-    <div style="font-size:12px;">Support | Login | FAQ | Help | SiteMap</div>
-  </div>  <div class="nav-bar">
+  </style></head>
+<body>  <!-- HEADER -->  <div class="header">
+    <div class="header-title">Ministry of Skill Development And Entrepreneurship</div>
+    <div class="header-links">Support | Login | FAQ | Help | SiteMap</div>
+  </div>  <!-- NAVIGATION -->  <div class="nav">
     <a href="#">Home</a>
     <a href="#">ITI</a>
     <a href="#">Trainee</a>
@@ -129,14 +184,16 @@
     <a href="#">Help</a>
     <a href="#">Dashboard</a>
     <a href="#">Complaint Tool</a>
-  </div>  <div class="container">
-    <div class="page-title">Trainee MarkSheet</div><div class="section">
+  </div>  <!-- MAIN -->  <div class="wrapper"><div class="page-title">Trainee MarkSheet</div>
+
+<!-- SEARCH CRITERIA -->
+<div class="section">
   <div class="section-header">Search Criteria</div>
   <table class="form-table">
     <tr>
-      <td>Roll Number/Registration Number<span style="color:red;">*</span></td>
-      <td><input type="text" value="R190810024940" /></td>
-      <td>Exam System<span style="color:red;">*</span></td>
+      <td>Roll Number / Registration Number <span style="color:red">*</span></td>
+      <td><input type="text" value="R190810024940"></td>
+      <td>Exam System <span style="color:red">*</span></td>
       <td>
         <select>
           <option>Annual</option>
@@ -144,7 +201,7 @@
       </td>
     </tr>
     <tr>
-      <td>Year<span style="color:red;">*</span></td>
+      <td>Year <span style="color:red">*</span></td>
       <td>
         <select>
           <option>All</option>
@@ -152,14 +209,16 @@
       </td>
     </tr>
   </table>
-  <div class="buttons">
-    <button>Search</button>
-    <button>Clear</button>
+  <div class="btn-area">
+    <button class="btn">Search</button>
+    <button class="btn">Clear</button>
   </div>
 </div>
 
+<!-- SEARCH RESULT -->
 <div class="section">
   <div class="section-header">Search Results</div>
+
   <table class="info-table">
     <tr>
       <td><b>Roll Number:</b> 190810024940</td>
@@ -179,24 +238,25 @@
     </tr>
   </table>
 
-  <table>
+  <!-- MARKS TABLE -->
+  <table class="marks">
     <tr>
       <th>S.No.</th>
       <th>Year</th>
-      <th>Trade Theory<br>Max. Marks</th>
-      <th>Trade Theory<br>Marks Secured</th>
-      <th>Employability Skills<br>Max. Marks</th>
-      <th>Employability Skills<br>Marks Secured</th>
-      <th>Workshop Calculation & Science<br>Max. Marks</th>
-      <th>Workshop Calculation & Science<br>Marks Secured</th>
-      <th>Engineering Drawing<br>Max. Marks</th>
-      <th>Engineering Drawing<br>Marks Secured</th>
-      <th>Trade Practical<br>Max. Marks</th>
-      <th>Trade Practical<br>Marks Secured</th>
-      <th>Formative Assessment<br>Max. Marks</th>
-      <th>Formative Assessment<br>Marks Secured</th>
-      <th>Total Max. Marks</th>
-      <th>Total Marks Secured</th>
+      <th>Trade Theory<br>Max</th>
+      <th>Trade Theory<br>Secured</th>
+      <th>Employability Skills<br>Max</th>
+      <th>Employability Skills<br>Secured</th>
+      <th>Workshop Calculation & Science<br>Max</th>
+      <th>Workshop Calculation & Science<br>Secured</th>
+      <th>Engineering Drawing<br>Max</th>
+      <th>Engineering Drawing<br>Secured</th>
+      <th>Trade Practical<br>Max</th>
+      <th>Trade Practical<br>Secured</th>
+      <th>Formative Assessment<br>Max</th>
+      <th>Formative Assessment<br>Secured</th>
+      <th>Total Max</th>
+      <th>Total Secured</th>
     </tr>
     <tr>
       <td>1</td>
@@ -229,12 +289,12 @@
       <td>25</td>
       <td>250</td>
       <td>221</td>
-      <td>221</td>
+      <td>200</td>
       <td>196</td>
       <td>330</td>
       <td>536</td>
     </tr>
-    <tr style="font-weight:bold;background:#eaf2fb;">
+    <tr class="total">
       <td colspan="2">Total</td>
       <td>200</td>
       <td>92</td>
@@ -253,13 +313,12 @@
     </tr>
   </table>
 
-  <div class="result-footer">
-    <b>Result Date:</b> 10-Mar-2022
+  <div class="result-date"><b>Result Date:</b> 10-Mar-2022</div>
+
+  <div class="center">
+    <button class="btn">Redirect To Answer Sheet</button>
   </div>
 
-  <div class="center" style="margin-top:15px;">
-    <button class="buttons">Redirect To Answer Sheet</button>
-  </div>
 </div>
 
   </div></body>
