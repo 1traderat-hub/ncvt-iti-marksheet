@@ -107,8 +107,21 @@ table.marks{
   border-collapse:collapse;
   font-size:12.5px;
 }
-table.marks th,table.marks td{
-  border:3px solid #b6cce3;
+table.marks{
+  border-collapse:collapse;
+  border:1px solid #000;   /* outer border black */
+}
+
+table.marks th{
+  border:1px solid #000;   /* header border black */
+  background:linear-gradient(#8fb6dd,#6f9fd1);
+  font-weight:bold;
+  color:#000;
+}
+
+table.marks td{
+  border:1px solid #000;   /* data cell border black */
+}
   padding:6px 5px;
   text-align:center;
 }
