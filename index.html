@@ -9,39 +9,53 @@
       font-family:Arial, Helvetica, sans-serif;
       background:#eef3f7;
       color:#000;
-    }/* HEADER */
+    }/* ===== HEADER (MINISTRY BAR) ===== */
 .header{
-  background:linear-gradient(#e9f3fb,#d6e7f7);
-  border-bottom:2px solid #7aa6d8;
-}
+  background:linear-gradient(#ffffff,#e6f0fa);
+  border-bottom:2px solid #6c9ed4;
   padding:12px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
+
 .header h1{
   margin:0;
-  font-size:20px;
-  color:#083c6d;
+  font-size:22px;
+  font-weight:bold;
+  color:#0a3d78;
 }
-.header span{font-size:12px;color:#083c6d}
 
-/* NAV */
+.header span{
+  font-size:13px;
+  color:#0a3d78;
+}
+
+/* ===== NAV BAR ===== */
 .nav{
-  background:linear-gradient(#7fb2e5,#5f9fd9);
+  background:linear-gradient(#7fb2e5,#5b9bd5);
+  border-top:1px solid #4a87c5;
   border-bottom:2px solid #4a87c5;
+  padding:0 10px;
+  display:flex;
+  flex-wrap:wrap;
 }
+
 .nav a{
-  color:#000;
-}
-  padding:7px 12px;
-}
-.nav a{
+  padding:8px 14px;
   font-size:13px;
   font-weight:bold;
   color:#000;
   text-decoration:none;
-  margin-right:18px;
+  border-right:1px solid #4a87c5;
+}
+
+.nav a:last-child{
+  border-right:none;
+}
+
+.nav a:hover{
+  background:linear-gradient(#5b9bd5,#7fb2e5);
 }
 
 /* MAIN */
